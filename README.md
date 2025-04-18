@@ -50,8 +50,7 @@ LogisticRegression(max_iter=1000)
 - Used `sm.Logit()` for statistical interpretation.
 - Outputs coefficients, p-values, confidence intervals.
 - Odds ratios calculated and visualized.
-- Notable predictors: `Speeches_Given`, `Delegation_France`, `Delegation_Germany`, `Committee_UNSC`.
-
+- 
 ---
 ## Testing Random Forest Modeling
 -The accuracy was higher than the one resulted from the logistic regression Model.
