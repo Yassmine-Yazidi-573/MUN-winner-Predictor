@@ -54,8 +54,8 @@ LogisticRegression(max_iter=1000)
 
 ---
 ## Testing Random Forest Modeling
--The accuracy was higher than the one resulted from the regression Model
--The features importance plot had  more logical insights
+-The accuracy was higher than the one resulted from the regression Model.
+-The features importance plot had  more logical insights.
 
 ## 📉 Key Findings
 
