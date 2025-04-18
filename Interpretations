@@ -1,0 +1,52 @@
+## 📊 **Model Overview**
+- **Dependent variable:** `Award_Won` (binary: 1 = won, 0 = did not win)
+- **Observations:** 80
+- **Pseudo R-squared:** 0.2812 → Moderate explanatory power (common in logistic models)
+- **Converged:** Yes ✅
+- **LLR p-value:** 0.1553 → The overall model is **not statistically significant at the 5% level**, but individual predictors may still provide insight.
+
+---
+
+## 🔍 **Key Feature Interpretations**
+
+### ✅ Statistically Significant Predictors (P < 0.05)
+
+| Variable | Coef | P-value | Interpretation |
+|---------|------|---------|----------------|
+| **Experience_Level** | **0.8022** | **0.044** | For each 1-point increase in experience level (1 to 5 scale), the odds of winning increase significantly — holding all else constant. |
+| **Speeches_Given** | **0.2649** | **0.017** | Giving more speeches is associated with a significantly higher chance of winning an award. |
+
+---
+
+### ⚖️ Not Statistically Significant (But worth discussing)
+
+| Variable | Coef | P-value | Comment |
+|---------|------|---------|---------|
+| `Previous_MUNs` | -0.8502 | 0.867 | Surprisingly, more past MUNs does **not** increase award odds in this model. May be due to multicollinearity with other experience features. |
+| `Points_of_Information` | -0.1697 | 0.875 | No significant effect; POIs might not be as important for awards as speeches or presence. |
+| `Presence` | 0.1366 | 0.878 | High attendance does not have a significant effect here, though it could in real contexts. |
+| `Previous_Resolutions_Sponsored` | 0.2582 | 0.358 | Slight positive relationship, but not significant. |
+| `Chairs_Penalties` | -0.0863 | 0.821 | Getting penalized has the expected negative effect, but it’s not significant here. |
+
+---
+
+### 🌍 Categorical Variables (Committee & Delegation)
+
+These dummy variables compare each group to the **reference group** (first one dropped during `get_dummies()` — likely the first alphabetically).
+
+- Some have large coefficients (e.g., `Delegation_France = 3.2655`, `Committee_UNDP = 2.3696`) but **high p-values**, meaning:
+  - There may be large differences between committees/countries
+  - But the sample size isn’t large enough to prove it's statistically significant
+
+---
+
+## ✅ Summary of Insights
+
+1. **Most impactful and significant factors:**
+   - `Experience_Level` (P = 0.044)
+   - `Speeches_Given` (P = 0.017)
+   > 👉 More experienced and more vocal delegates are more likely to win awards.
+
+2. **Other predictors** like penalties, POIs, and presence are in the expected direction but not significant in this sample.
+
+3. **Country and committee dummies** may show useful patterns but require a larger sample for confident interpretation.
