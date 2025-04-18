@@ -54,7 +54,7 @@ LogisticRegression(max_iter=1000)
 
 ---
 ## Testing Random Forest Modeling
--The accuracy was higher than the one resulted from the regression Model.
+-The accuracy was higher than the one resulted from the logistic regression Model.
 
 ## 📉 Key Findings
 
