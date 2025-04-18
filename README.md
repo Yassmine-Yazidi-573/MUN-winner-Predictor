@@ -42,15 +42,9 @@ The dataset `mun_participants_dataset.csv` contains 100 records with the followi
 - Train-test split: 80% training, 20% testing.
 
 ### 🔍 Model Training & Evaluation (Scikit-learn)
-
 ```python
 LogisticRegression(max_iter=1000)
 ```
-
-- **Accuracy:** ~50%
-- **Confusion Matrix:** Model struggles with classifying award winners (imbalanced dataset).
-- **Top features:** Visualized via bar chart of top 15 coefficients.
-
 ### 📈 Model Summary (Statsmodels)
 
 - Used `sm.Logit()` for statistical interpretation.
@@ -65,34 +59,3 @@ LogisticRegression(max_iter=1000)
 - Feature `Speeches_Given` was statistically significant (p < 0.05).
 - Some country delegations showed higher odds of winning awards.
 - Logistic regression performance was limited due to potential class imbalance or non-linearity.
-
----
-
-## 📦 Dependencies
-
-Make sure to install the required libraries:
-
-```bash
-pip install pandas numpy matplotlib seaborn scikit-learn statsmodels
-```
-
----
-
-## 📁 File Structure
-
-```
-mun-award-prediction/
-│
-├── mun_participants_dataset.csv
-├── mun_award_prediction.ipynb
-├── README.md
-```
-
----
-
-## 📌 Future Improvements
-
-- Balance the dataset using oversampling or SMOTE.
-- Experiment with other models (Random Forest, SVM, XGBoost).
-- Incorporate additional behavioral or qualitative data (moderation style, leadership roles).
-- Perform cross-validation for more robust results.
