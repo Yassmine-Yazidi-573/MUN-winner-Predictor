@@ -60,3 +60,9 @@ LogisticRegression(max_iter=1000)
 - Feature `Speeches_Given` was statistically significant (p < 0.05).
 - Some country delegations showed higher odds of winning awards.
 - Logistic regression performance was limited due to potential class imbalance or non-linearity.
+---
+## 👩‍💻 Author
+
+**Yassmine Yazidi**  
+Business Student & Data Enthusiast  
+Tunisia 🇹🇳
